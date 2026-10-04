@@ -21,7 +21,7 @@
 </head>
 <body>
 <h1>Privacy Policy</h1>
-<p class="updated">Prism JA-EN Live · Last updated 10 September 2026</p>
+<p class="updated">Prism JA-EN Live · Last updated 3 October 2026</p>
 
 <p>Prism JA-EN Live translates spoken Japanese and English on Even Realities G2
 smart glasses. It is built so that what you say never leaves your phone.</p>
@@ -37,17 +37,24 @@ the microphone is on, which is shown on the glasses and on the companion screen.
 <p>Audio is held in memory on the phone for a few seconds at a time, long enough to
 detect a sentence and transcribe it, and is then discarded. It is never written to
 storage and never transmitted. Speech recognition and translation both run on the
-phone itself, using models contained in the app.</p>
+phone itself, using models stored on the device.</p>
 
 <h2>Network</h2>
-<p><strong>The app requests no network permission.</strong> Everything it needs,
-including the speech-recognition and translation models, is contained in the app.
-It works with no internet connection and is not technically capable of sending your
-speech, transcripts or translations anywhere.</p>
+<p>The app requests one network permission, restricted to a single address:
+<code>https://pub-740250fcd22d4c9cadcd0f880ff65b78.r2.dev</code>.</p>
+<p>It is used once. The first time you open the app it asks you to confirm, then
+downloads the speech-recognition and translation models and stores them on the
+device. After that the app works with no internet connection at all.</p>
+<p><strong>That connection only downloads. Nothing is uploaded over it.</strong> Your
+speech, transcripts and translations are never sent anywhere, and the app blocks
+requests to every other address while it runs, so it has no route to anywhere else.</p>
+<p>As with any file download, the service hosting the models can see the IP address
+that requested them and which files were requested. No account, identifier or
+information about you is attached to the request.</p>
 
 <h2>Conversation history</h2>
 <p>Transcripts and translations are saved on the phone so you can read them later.
-They are stored in the app's own database, on that device only.</p>
+They are stored in the app's own storage, on that device only.</p>
 <ul>
   <li>They are never uploaded.</li>
   <li>You can delete any single conversation, or all of them, from the companion screen.</li>
